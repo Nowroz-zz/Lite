@@ -2,11 +2,10 @@ package Lite;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
+import javafx.scene.control.TabPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 /**
  * @author Nowroz Islam on 11/30/2017
@@ -18,13 +17,10 @@ public class Main extends Application{
         sender(primaryStage);
         AnchorPane root=new AnchorPane();
         VBox vBox=new VBox(10,Menu.buttonBox,_TabPane.tabPane);
-        AnchorPane.setTopAnchor(vBox,5.0);
         root.getChildren().addAll(vBox);
         Scene scene=new Scene(root);
         primaryStage.setTitle("Lite");
         primaryStage.setScene(scene);
-        primaryStage.setResizable(false);
-        primaryStage.getIcons().add(new Image("file:Icon/icon.png"));
         primaryStage.show();
     }
     void sender(Stage primaryStage){

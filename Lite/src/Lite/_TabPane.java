@@ -12,7 +12,6 @@ public class _TabPane{
         QueryTab.initiate();
         SchemaTab.initiate();
         tabPane=new TabPane();
-        tabPane.setTabMinWidth(200);
         tabPane.getTabs().addAll(SchemaTab.schemaTab,QueryTab.queryTab);
         tabPane.setTabClosingPolicy(TabPane.TabClosingPolicy.UNAVAILABLE);
     }

@@ -56,7 +56,6 @@ public class SchemaTab {
             data.clear();
             initiate();
         });
-        refresh.setDefaultButton(true);
         ListView<String> structure = new ListView<>(data);
         structure.setPrefWidth(710);
         pane.getChildren().addAll(structure, refresh);

@@ -20,10 +20,6 @@ public class Menu {
     static void initiate(Stage primaryStage){
         create=new Button("Create");
         open = new Button("Open");
-        open.setMinWidth(100);
-        open.setMinHeight(40);
-        create.setMinWidth(100);
-        create.setMinHeight(40);
         open.setOnAction(e->open(primaryStage));
         create.setOnAction(e->create(primaryStage));
         buttonBox=new HBox(5,create,open);

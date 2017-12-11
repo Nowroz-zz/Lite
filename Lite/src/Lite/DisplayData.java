@@ -4,7 +4,6 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.Scene;
 import javafx.scene.control.ListView;
-import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -47,7 +46,6 @@ public class DisplayData {
         Stage stage=new Stage();
         stage.setScene(scene);
         stage.setTitle("Data List");
-        stage.getIcons().add(new Image("file:Icon/icon.png"));
         stage.show();
 
     }

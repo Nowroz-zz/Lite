@@ -1,6 +1,9 @@
 package Lite;
 
-import javafx.scene.control.*;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.Tab;
+import javafx.scene.control.TextArea;
 import javafx.scene.layout.AnchorPane;
 
 import java.sql.ResultSet;
@@ -15,24 +18,17 @@ public class QueryTab {
     static Tab queryTab;
     static TextArea statementField;
     static Button run;
-    static Label label;
     static void initiate(){
         queryTab=new Tab("Execute SQL");
         AnchorPane pane=new AnchorPane();
-        statementField=new TextArea();
+        statementField=new TextArea("Write your query here");
         run=new Button("Run");
-        label=new Label("Write your query here:");
-        AnchorPane.setTopAnchor(label,30.0);
-        AnchorPane.setLeftAnchor(label,7.0);
-        AnchorPane.setTopAnchor(statementField,50.0);
-        AnchorPane.setLeftAnchor(statementField,5.0);
         AnchorPane.setBottomAnchor(run,2.0);
         AnchorPane.setRightAnchor(run,2.0);
-        pane.getChildren().addAll(label,statementField,run);
+        pane.getChildren().addAll(statementField,run);
         pane.setMinWidth(780);
         queryTab.setContent(pane);
         run.setDefaultButton(true);
-        run.setMinWidth(200);
         run.setOnAction(e->{
             try{
                 if(Connection.conn!=null){
